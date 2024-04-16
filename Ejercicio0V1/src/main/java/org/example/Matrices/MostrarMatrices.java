@@ -11,28 +11,28 @@ public class MostrarMatrices {
         int l_ContadorY = 0;
         String[][] l_Matriz = new String[NUMY][NUMX];
 
-        for (l_ContadorY = 0 ; l_ContadorY < NUMY; l_ContadorY++) {
+        for (l_ContadorY = 0; l_ContadorY < NUMY; l_ContadorY++) {
 
-            for (l_ContadorX = 0 ; l_ContadorX < NUMX; l_ContadorX++ ) {
+            for (l_ContadorX = 0; l_ContadorX < NUMX; l_ContadorX++) {
 
                 l_Matriz[l_ContadorY][l_ContadorX] = String.valueOf(l_ContadorX) + String.valueOf(l_ContadorY);
 
             }
         }
 
-        Mostrar( l_Matriz);
-
+        Mostrar(l_Matriz);
+        MostrarInverso(l_Matriz);
     }
 
     public static void Mostrar(String[][] l_Matriz) {
 
         int l_ContadorX, l_ContadorY;
 
-        for (l_ContadorY = 0 ; l_ContadorY < NUMY; l_ContadorY++) {
+        for (l_ContadorY = 0; l_ContadorY < NUMY; l_ContadorY++) {
 
-            for (l_ContadorX = 0 ; l_ContadorX < NUMX; l_ContadorX++ ) {
+            for (l_ContadorX = 0; l_ContadorX < NUMX; l_ContadorX++) {
 
-               // System.out.println("Fila " + l_ContFilas + " Columna " + l_ContColumnas + " -> " + l_Matriz[l_ContFilas][l_ContColumnas]);
+                // System.out.println("Fila " + l_ContFilas + " Columna " + l_ContColumnas + " -> " + l_Matriz[l_ContFilas][l_ContColumnas]);
                 System.out.print(l_Matriz[l_ContadorY][l_ContadorX] + " ");
 
             }
@@ -40,4 +40,18 @@ public class MostrarMatrices {
         }
     }
 
+    public static void MostrarInverso(String[][] l_Matriz) {
+        int l_ContadorX, l_ContadorY;
+
+        System.out.println("\nMatriz invertida:");
+
+        for (l_ContadorX = 0; l_ContadorX < NUMX; l_ContadorX++) {
+
+            for (l_ContadorY = 0; l_ContadorY < NUMY; l_ContadorY++) {
+                System.out.print(l_Matriz[l_ContadorY][l_ContadorX] + " ");
+            }
+
+            System.out.println();
+        }
+    }
 }
