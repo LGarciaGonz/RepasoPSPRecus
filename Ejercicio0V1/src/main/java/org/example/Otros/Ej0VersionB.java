@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Otros;
 
 public class Ej0VersionB {
     public static void main(String[] args) {
